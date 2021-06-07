@@ -52,7 +52,10 @@ $temperature = -5; // entier négatif
 // boolean 
 $test = true ;
 $contreTest = false ;
+$test2 = "bonjour Madike !!!";
 
+// git clone https://github.com/webdevproformation/projet-php-d-juin2021.git
+// git pull 
 
 
 
