@@ -100,9 +100,9 @@ $_SERVER["REQUEST_URI"]; // '/projet-html/jour1/07-tableau-fonction.php'
 echo str_replace("07-tableau-fonction.php" , "", $_SERVER["REQUEST_URI"]) ."<br>";
 echo trim(str_replace("07-tableau-fonction.php" , "", $_SERVER["REQUEST_URI"]), "/") ."<br>";
 $urlPropre = trim(str_replace("07-tableau-fonction.php" , "", $_SERVER["REQUEST_URI"]), "/");
-var_dump(explode("/", $urlPropre ));
+var_dump( explode("/", $urlPropre ) );
 
-// cas pratique créer le fichier 08-exo.html 
+// cas pratique créer le fichier 08-exo.php 
 
 // utiliser la variable super $_SERVER => même si elles ne sont pas déclarées => elles sont disponibles vraiment PARTOUT même pas besoin de vérifier si elle est bien chargée avec un require() / include()
 
@@ -111,3 +111,5 @@ var_dump(explode("/", $urlPropre ));
 // combien d'élément contient cette super globale
 // pouvez vous me récupérer la version de PHP qui est actuellement utilisé dans votre système ??
 // récupérer le contenu de l'item PATH et transformer en tableau indexé via le symbole ; 
+
+// 13h35 ! bon appétit !!!!!!!!!!!!!!!!!!
