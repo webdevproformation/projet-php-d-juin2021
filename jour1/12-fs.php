@@ -52,4 +52,4 @@ var_dump(dirname($_SERVER['SCRIPT_FILENAME']));
 var_dump( $_SERVER );
 // je veux récupérer le nom du dossier qui contient le fichier en cours d'exécution 
 
-
+// 13-buffer-output.php
