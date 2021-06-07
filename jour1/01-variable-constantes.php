@@ -49,5 +49,10 @@ $nombre = 2; // entier
 $prix = 12.5; // float
 $temperature = -5; // entier négatif
 
+// boolean 
+$test = true ;
+$contreTest = false ;
+
+
 
 
