@@ -26,3 +26,5 @@ if(gettype($deuxieme) === "string" || strlen($deuxieme) >= 3 ){
 }else {
     echo '$deuxieme n\'est pas conforme à 100%' ;
 }
+
+// 11-destruction-json.php
