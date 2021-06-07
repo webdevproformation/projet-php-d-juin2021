@@ -57,5 +57,34 @@ $test2 = "bonjour Madike !!!";
 // git clone https://github.com/webdevproformation/projet-php-d-juin2021.git
 // git pull 
 
+// tableau 
+// en PHP deux manières de créer des tableaux 
 
+// à l'ancienne 
+$liste = array(); 
 
+// la nouvelle manière de créer des tableaux 
+$liste2 = [] ;
+
+// objet => au préalable avoir une class pour pouvoir créer un objet 
+
+class Formation { // pour les class et UNIQUEMENT class 
+// toujours la 1ère lettre en Majuscule 
+// dès que vous manipulez une class => voir instantanément
+// la 1ère lettre n'a pas d'impacte dans le codage => règle d'écriture 
+}
+
+$f = new Formation();
+
+// créer le fichier 02-exo.php 
+
+// créer trois variables $prenom = "Victor"
+// créer trois variables $nom = "Hugo"
+// créer trois variables $livres = tableau 
+        //    Notre Dame , les Misérables , Hernani
+
+// écrire dans la page web les phrases suivantes 
+
+// Victor Hugo a écrit au moins 3 livres
+// Victor Hugo a écrit Notre Dame de Paris avec les les Misérables
+// Hernani est une pièce de théâtre sur la condition humaine
