@@ -66,3 +66,26 @@ $toto = "bonjour";
 $tata = !!$toto ; // true  = !! true
 
 // https://www.php.net/manual/fr/filter.filters.flags.php
+
+// créer le fichier 10-exo.php
+
+// partie 1 contenant cinq variables :
+// $chiffre1 = "2" ;
+// $chiffre2 = 2 ;
+// $chiffre3 = $chiffre2 + $chiffre1 ;
+// $chiffre4 = $chiffre2 === $chiffre1 ;
+// $chiffre5 = $chiffre1 - $chiffre2;
+
+// déterminer le type de chaque variable ?
+
+// partie 2 : créer deux variables
+// $premier = "Bonjour"
+// $deuxieme = 3
+
+// 1/ vérifier que la variable $premier est de type string et de longueur 20 caractères
+// si les deux conditions sont true afficher dans le navigateur : $premier est conforme
+
+// 2/ vérifer que la variable $deuxime est de type string de longueur 3 caractères
+// si l'un des deux condition est true afficher à l'écran : $deuxieme est quasi conforme
+// sinon
+// afficher dans le navigateur deuxieme n'est pas conforme à 100%
