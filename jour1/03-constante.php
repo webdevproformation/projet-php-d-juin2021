@@ -31,3 +31,9 @@ function b(){
 }
 b();
 echo $phrase;
+
+
+// fonctions associées à certains types de variables 
+// 04-fonction-string.php
+
+
