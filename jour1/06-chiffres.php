@@ -7,3 +7,5 @@ $prix = 12000.520;
 echo number_format($prix, 1, "," , " ");
 
 // http://localhost/projet-html/jour1/06-chiffres.php
+
+// 07-tableau-fonction.php
