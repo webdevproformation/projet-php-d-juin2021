@@ -48,3 +48,5 @@ var_dump(explode("/",$_SERVER["SERVER_SOFTWARE"])[$nb]    );
 var_dump(explode(";",$_SERVER["PATH"]));
 
 var_dump($_SERVER);
+
+//09-boolean.php
