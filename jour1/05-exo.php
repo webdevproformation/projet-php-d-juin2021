@@ -14,3 +14,5 @@ $homePage = [$tabUrl , $titreSansBalise , $out];
 var_dump($homePage);
 
 // http://localhost/projet-html/jour1/05-exo.php
+
+// 06-chiffres.php
