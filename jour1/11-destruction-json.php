@@ -39,3 +39,4 @@ $jsonDecode = json_decode($json); // json => stdClass avec deux attributs public
 
 echo $jsonDecode->titre . "<br>";
 
+//12-fs.php
