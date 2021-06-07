@@ -18,4 +18,5 @@ $content_for_layout = ob_get_clean();
 require "14-default.php";
 
 // controller => $this->render()
+// fonction qui permet de définir le nom du fichier qui va servir de modèle pour la vue !! 
 

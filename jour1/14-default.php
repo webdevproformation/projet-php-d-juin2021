@@ -13,6 +13,5 @@
             <?= $content_for_layout ?>
         </section>
     </div>
-   
 </body>
 </html>
