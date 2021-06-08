@@ -72,3 +72,4 @@ var_dump($e);
 $e->setNote(14); // Fatal error: Uncaught Error: Call to private method Exercice::setNote() 
 var_dump($e);
 
+// 03-class-static.php
