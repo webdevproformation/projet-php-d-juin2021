@@ -12,5 +12,9 @@ if(isset($_GET["p"])){
    // charger le fichier qui controller qui est stocké dans le dossier controller
    require "controller/".$controller . ".class.php";
 
+   $controllerName = ucfirst($controller)."Controller";
+
+   $c= new $controllerName(); // $c = new AccueilController();
+   $c->$method(); // $c->index();
 
 }
