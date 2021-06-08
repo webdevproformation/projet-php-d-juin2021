@@ -15,11 +15,18 @@ if(isset($_GET["p"])){
         require $controller_file;
         $controllerName = ucfirst($controller)."Controller";
         $c= new $controllerName(); // $c = new AccueilController();
-        $c->$method(); // $c->index();
-   }else {
+        
+        if(method_exists($c , $method  )){
+            $c->$method(); // $c->index();
+        }else{
+            header("HTTP/1.0 404 Not Found");
+            require "view/404.php";
+            die();
+        }
+   } else {
        // si le controller appelé n'existe pas alors => page d'erreur 404 
+        header("HTTP/1.0 404 Not Found");
         require "view/404.php";
         die();
    }
-   
 }
