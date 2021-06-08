@@ -44,6 +44,7 @@ class Enfant2 extends Pere{
     // propriété / méthode de l'enfant qui seront utilisés => polymorphisme 
     // override => surcharger / ne pas tenir compte 
 
+
     public function bonjour(){
         return "Bonjour $this->prenom $this->nom" ;
     }
@@ -80,5 +81,7 @@ echo $e2->hello();
 // Guerrier en plus des valeurs que le Personnage
 // force 
 // méthode attaquer => retourne nom du personnage attaque + exp * force
+
+// parent::__construct();
 
 // créer ces class et les tester avec des arguments conformes 
