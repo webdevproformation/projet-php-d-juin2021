@@ -10,8 +10,14 @@ class Controller{
         $dossier =  str_replace("Controller", "" , get_class($this)) ;
         $dossier = strtolower($dossier);
 
-        require "view/$dossier/$nomView.php";
-
+        $filename = "view/$dossier/$nomView.php";
+        if(file_exists($filename)){
+            require $filename;
+        } else {
+            echo "veuillez créer le fichier de vue $filename";
+            die();
+        }
+        
     }
 
 }
