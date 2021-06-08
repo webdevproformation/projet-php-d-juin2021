@@ -65,7 +65,7 @@ var_dump(get_class_methods($v)); // si besoin d'avoir la liste des méthodes de 
 //    duree
 //    note 
 
-// intialiser ces 4 valeurs 
+// initialiser ces 4 valeurs 
 //  technologies => tableau 
 //  sujet chaine de caractères
 //  duree chiffre positif et entier
