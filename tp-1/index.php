@@ -17,8 +17,9 @@ if(isset($_GET["p"])){
         $c= new $controllerName(); // $c = new AccueilController();
         $c->$method(); // $c->index();
    }else {
-    echo "le fichier n'existe pas";
-    die();
+       // si le controller appelé n'existe pas alors => page d'erreur 404 
+        require "view/404.php";
+        die();
    }
    
 }
