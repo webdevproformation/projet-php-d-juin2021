@@ -20,7 +20,33 @@ index.php => Dispatcher => recevoir les requêtes et charger le bon controller
 
 .htaccess fichier de config de Apache => rediriger requêtes vers le fichier index.php 
 
-rediriger toutes les requêtes vers le fichier index.php 
+rediriger toutes les requêtes vers le fichier index.php
 
 index.php => point d'entrée de notre site internet 
 
+.htaccess
+
+RewriteEngine on est ce le module mod_rewrite de apache est actifs ??
+
+RewriteRule ^([a-zA-Z0-9\-/_]*)$ index.php?p=$1
+domaine                              variable de l'adresse internet 
+http://localhost/projet-html/tp-1/ ici/recupérer/information
+
+expression régulière 
+
+index.php?p=ici/recupérer/information
+
+------------------
+
+fichier.php => $_GET vide 
+fichier.php?date=01/01/2021&unite=jours => $_GET 
+[ 
+    "date" =>"01/01/2021",
+    "unite" => "jours"
+]
+
+index.php?p=accueil/index $_GET 
+
+[
+    "p" => "accueil/index"
+]
