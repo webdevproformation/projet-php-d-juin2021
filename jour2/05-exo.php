@@ -41,6 +41,7 @@ class Magicien extends Personnage{
 
     public function attaquer(){
         return parent::attaquer() . ($this->exp * $this->mana) ; 
+        // return $this->nom ." a une puissance d'attaque de "
     }
 }
 
