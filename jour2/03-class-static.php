@@ -41,3 +41,6 @@ var_dump(Formation::$duree)  ."<br>"; // propriété statique permettent de part
 // $objet2 = new Class("","")
 
 // est ce que la class a déjà été exécutée ?? 
+// rdv 10h45 bon café !!!! @ toute suite !!! 
+
+// 04-heritage.php
