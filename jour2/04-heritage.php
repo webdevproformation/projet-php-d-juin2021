@@ -56,3 +56,29 @@ class Enfant2 extends Pere{
 $e2 = new Enfant2("John","DOE");
 
 echo $e2->hello();
+
+// créer le fichier 05-exo.php 
+// class Personnage 
+// deux class qui héritent de Personnage 
+// Magicien // Guerrier
+
+// propriété de personnage :
+// nom  string
+// vie  chiffre entier positif
+// actif  boolean
+// exp  chiffre entier positif
+
+// méthode attaquer => retourne nom du personnage attaque 
+
+// initialiser ces valeurs 
+
+// Magicien en plus des valeurs que le Personnage
+// mana  chiffre entier positif
+
+// méthode attaquer => retourne nom du personnage attaque + exp * mana
+
+// Guerrier en plus des valeurs que le Personnage
+// force 
+// méthode attaquer => retourne nom du personnage attaque + exp * force
+
+// créer ces class et les tester avec des arguments conformes 
