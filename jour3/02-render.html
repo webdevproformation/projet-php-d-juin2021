@@ -1,0 +1,25 @@
+appeler le fichier view/accueil/index.php => centre de la page 
+
+je veux le mettre dans une structure html classique 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    => ici le html du fichier view/accueil/index.php
+</body>
+</html>
+
+=> ob_start()
+=> ob_get_clean()
+
+buffering => on veut que view/accueil/index.php stocké dans une mémoire tampon
+            et ne pas les afficher à l'écran 
+            mais plutôt les stocker dans une variable 
+
+dans le dossier view ajouté un nouveau fichier front-template.php
