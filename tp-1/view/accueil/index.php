@@ -8,8 +8,11 @@
             </header>
             <img src="http://via.placeholder.com/300x100?text=<?= $article->id ?>" alt="">
             <div class="card-body">
-                <?= $article->contenu ?>
+                <?= substr($article->contenu, 0 , 100) ?>
             </div>
+            <footer class="card-footer">
+                <a href="#" class="btn btn-dark btn-sm">lire la suite ...</a>
+            </footer>
         </article>
     </div>
 <?php endforeach ?>
