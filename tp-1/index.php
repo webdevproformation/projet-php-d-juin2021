@@ -5,12 +5,6 @@ if(isset($_GET["p"])){
    require "core/Model.class.php";
    require "core/Controller.class.php";
 
-   /* Model::getPdo() == $m =  new Model */
-   /* Model::getPdo()->query() == $m->db  */
-
-   $articles = Model::getPdo()->query("SELECT * FROM articles");
-    var_dump($articles); die();
-
    $params = explode("/",trim($_GET["p"] , "/"));
 
    //var_dump($params); 

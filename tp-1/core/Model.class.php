@@ -31,6 +31,4 @@ class Model {
         $requete->execute();
         return $requete->fetchAll(PDO::FETCH_OBJ);
     }
-    
-
 }
