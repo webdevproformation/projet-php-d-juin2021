@@ -1,4 +1,4 @@
-<h1>Bienvenu sur mon site jour 2</h1>
+<h1><?= $titre ?></h1>
 <?php // var_dump($articles) ?>
 <?php foreach($articles as $article  ) : ?>
     <div class="col-4">

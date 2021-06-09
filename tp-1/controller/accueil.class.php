@@ -5,6 +5,7 @@ class AccueilController extends Controller{
         // appeler un ou plusieurs model => appeler la base de données 
         // Model / Vue / Controller <= Dispatcher url 
         $data = [ 
+            "titre" => "Bienvenu sur mon site TP",
             "articles" => [
                 [ "titre" => "article 1" , "contenu" => "lorem ipsum" , "id" => 1],
                 [ "titre" => "article 2" , "contenu" => "lorem ipsum" , "id" => 2],
