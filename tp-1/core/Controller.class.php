@@ -11,7 +11,10 @@ class Controller{
 
         $filename = "view/$dossier/$nomView.php";
         if(file_exists($filename)){
+            ob_start();
             require $filename;
+            $_content_for_template = ob_get_clean();
+            require "view/front-template.php";
         } else {
             echo "veuillez créer le fichier de vue $filename";
             die();
