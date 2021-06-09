@@ -4,11 +4,11 @@
     <div class="col-4">
         <article class="card mb-3">
             <header class="card-header">
-                <h2><?= $article["titre"] ?></h2>
+                <h2><?= $article->titre ?></h2>
             </header>
-            <img src="http://via.placeholder.com/300x100?text=<?= $article["id"] ?>" alt="">
+            <img src="http://via.placeholder.com/300x100?text=<?= $article->id ?>" alt="">
             <div class="card-body">
-                <?= $article["contenu"] ?>
+                <?= $article->contenu ?>
             </div>
         </article>
     </div>
