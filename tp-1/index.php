@@ -9,6 +9,8 @@ if(isset($_GET["p"])){
     var_dump($connexion->pdo);
     die(); */
 
+    var_dump(Model::getPdo());
+
    $params = explode("/",trim($_GET["p"] , "/"));
 
    //var_dump($params); 
