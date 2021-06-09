@@ -1,0 +1,23 @@
+
+.htaccess => 
+index.php => Dispatcher 
+    récupérer une adresse internet $_GET["p"] =>  "accueil/index"
+    http://localhost/projet-html/tp-1/accueil/index
+
+    charger le ou les bons fichiers dans notre système 
+
+    AccueilController.php 
+
+    exécuter la méthode function index(){}
+
+    si je tape n'importe quoi => 404.php 
+
+    -------------- 
+
+    dans la méthode index(){   } nous avons ajouté 
+
+    $this->render("index"); -> appeler une fichier de vue 
+    
+    charger un fichier de vue qui est stocké view/accueil/index.php
+
+    si j'appelle une vue qui n'existe pas => message d'erreur (développeur)

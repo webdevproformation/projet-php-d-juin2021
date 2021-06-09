@@ -1,0 +1,47 @@
+# http://localhost/projet-html/tp-1/Accueil/index
+# bon appétit rdv dans 1h => 13h37 !!
+
+# fichier de configuration de Apache 
+# donne des indications au Service Apache sur comment se comporter 
+# exécuté AVANT exécution des fichiers .php 
+# donner des Directives (Ordres) au serveur sur comment se comporter 
+
+# RewriteEngine on => utilise le moteur de réécriture
+# RewriteRule ^([a-zA-Z0-9\-/_]*)$ index.php?p=$1
+
+# http://domaine.fr => adresse racine 
+# http://localhost/projet-html/tp-1/ => page d'accueil 
+
+# http://localhost/projet-html/tp-1/index.php => page d'accueil 
+# http://localhost/projet-html/tp-1/contact.php => page de contact 
+# http://localhost/projet-html/tp-1/blog.php => page de blog
+# http://localhost/projet-html/tp-1/article-1.php => page de article 1
+# http://localhost/projet-html/tp-1/article-2.php => page de article 2
+# http://localhost/projet-html/tp-1/article-suite.php => page de article suite
+
+
+# http://localhost/projet-html/tp-1/index.php?p=accueil/index => page d'accueil 
+# http://localhost/projet-html/tp-1/index.php?p=accueil => page d'accueil 
+# http://localhost/projet-html/tp-1/index.php?p=accueil/ => page d'accueil 
+# http://localhost/projet-html/tp-1/index.php => page d'accueil 
+# http://localhost/projet-html/tp-1/index.php?p=contact/index => page de contact 
+# http://localhost/projet-html/tp-1/index.php?p=article/index => page de blog 
+# http://localhost/projet-html/tp-1/index.php?p=article/voir/1 => page de article 1 
+# http://localhost/projet-html/tp-1/index.php?p=article/voir/2 => page de article 1 
+# http://localhost/projet-html/tp-1/index.php?p=article/voir/3 => page de article 1 
+
+
+# http://localhost/projet-html/tp-1/accueil/index => page d'accueil 
+# http://localhost/projet-html/tp-1/accueil => page d'accueil 
+# http://localhost/projet-html/tp-1/accueil/ => page d'accueil 
+# http://localhost/projet-html/tp-1/ => page d'accueil 
+# http://localhost/projet-html/tp-1/contact/index => page de contact 
+# http://localhost/projet-html/tp-1/article/index => page de blog 
+# http://localhost/projet-html/tp-1/article/voir/1 => page de article 1 
+# http://localhost/projet-html/tp-1/article/voir/2 => page de article 2 
+# http://localhost/projet-html/tp-1/article/voir/3 => page de article 3 
+
+# http://localhost/projet-html/tp-1/search/2021/10/moi/toto/tata => page de article 3 
+# http://localhost/projet-html/tp-1/admin/index => page accueil admin
+# http://localhost/projet-html/tp-1/admin/article/modif/1 => page admin
+# http://localhost/projet-html/tp-1/index.php?p=admin/article/modif/1 => page accueil admin
