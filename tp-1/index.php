@@ -2,7 +2,12 @@
 // dispatcher récupérer une partie de l'url => exécuter le bon controller 
 // rdv 15h45 bon café @ toute suite !! 
 if(isset($_GET["p"])){
+   require "core/Model.class.php";
    require "core/Controller.class.php";
+
+    /* $connexion = new Model();
+    var_dump($connexion->pdo);
+    die(); */
 
    $params = explode("/",trim($_GET["p"] , "/"));
 
