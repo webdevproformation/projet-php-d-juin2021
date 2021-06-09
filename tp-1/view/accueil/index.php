@@ -11,7 +11,7 @@
                 <?= substr($article->contenu, 0 , 100) ?>
             </div>
             <footer class="card-footer">
-                <a href="#" class="btn btn-dark btn-sm">lire la suite ...</a>
+                <a href="article/view/<?= $article->id ?>" class="btn btn-dark btn-sm">lire la suite ...</a>
             </footer>
         </article>
     </div>
