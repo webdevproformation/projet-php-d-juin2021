@@ -11,13 +11,14 @@ if(isset($_GET["p"])){
 
    $controller = strtolower( isset($params[0]) && !empty($params[0]) ? $params[0] : "accueil" ); //accueil
    $method = strtolower( isset($params[1]) ? $params[1] : "index"  );  // index
+    // # http://localhost/projet-html/tp-1/article/index
 
    $controller_file = "controller/".$controller . ".class.php";
    if(file_exists($controller_file)){
         // charger le fichier qui controller qui est stocké dans le dossier controller
         require $controller_file;
-        $controllerName = ucfirst($controller)."Controller";
-        $c= new $controllerName(); // $c = new AccueilController();
+        $controllerName = ucfirst($controller)."Controller"; // ArticleController
+        $c= new $controllerName(); // $c = new ArticleController();
 
         if(method_exists($c , $method )){
             // http://localhost/projet-html/tp-1/accueil/index

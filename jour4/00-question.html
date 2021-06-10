@@ -1,0 +1,70 @@
+la sécurité est ce que c'est une base de données ou un htaccess ??
+
+- base de données => stocke des informations
+- .htaccess => Directive pour le server Apache AVANT les fichiers PHP
+
+=> écrire à la main .htaccess pas possible de le gérer autrement 
+
+zone de gestion de site => Back office
+
+=> espace sécurisé via un autre fichier  .htaccess + .htpasswd 
+MAIS ce n'est facile à gérer => ajouter un nouveau compte utilisateur 
+
+=> si tu as plusieurs utilisateurs du Back office perdre leur mot depasse / changer / quand les se connecter / groupe droit ..... 
+=> Base de Données 
+
+
+class Formation{
+    public $prop1 = 12;
+    public function methode(){}
+}
+
+$f = new Formation();
+
+$f->prop1 ; // 12
+$f->methode(){} ; // ....
+
+--------------------------- 
+
+class Etude {
+    public $prop1 = 12;
+    public $connexion ;
+    static public $instance ;
+
+    static public function methode(){
+        if(self::$instance == null){
+            $e = new Etude()
+            return $e
+        } else {
+            return self::$instance
+        }
+    }
+    public function __construct(){
+        $this->connexion = new PDO();
+    }
+
+    public function query(){
+        $this-> connexion 
+    }
+}
+
+Etude::methode()->query()
+Etude::methode()->query()
+Etude::methode()->query()
+Etude::methode()->query()
+Etude::methode()->query()
+Etude::$instance 
+
+$e = new Etude()
+
+$e-> prop1 = 12;
+$e-> connexion = new PDO();;
+$e->methode() ;
+$e->query()
+
+
+ajouter dans la base de données => 3 nouveaux articles 
+
+php myadmin => demo > article 3 nouveaux articles
+
+ http://localhost/projet-html/tp-1/
