@@ -21,9 +21,14 @@ if(isset($_GET["p"])){
         $c= new $controllerName(); // $c = new ArticleController();
 
         if(method_exists($c , $method )){
-            // http://localhost/projet-html/tp-1/accueil/index
-            // Framework PHP => Symfony Laravel CakePHP CodeIgnity
-            $c->$method(); // $c->index(); 
+            /* var_dump($params); */
+            $params = array_splice($params,2);
+           /*  var_dump($params);
+            die(); */
+
+            call_user_func_array([ $c , $method], $params  );
+    
+           // $c->$method($params); // $c->index(); 
         }else{
             //http://localhost/projet-html/tp-1/accueil/toto
             header("HTTP/1.0 404 Not Found");
