@@ -28,7 +28,9 @@ class AdminController extends Controller{
                /*  var_dump($sql); */
                // core/Model.class.php
                 Model::getPdo()->query($sql, $_POST);
-               
+               // redirection vers la page d'accueil du back office
+               header("location: ".WWW."admin/accueil");
+               die();
             }
         }
 
