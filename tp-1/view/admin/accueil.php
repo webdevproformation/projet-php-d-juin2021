@@ -2,7 +2,7 @@
 <h1>Bienvenu dans le back office de votre site</h1>
 
 <div>
-    <a href="<?= WWW ?>admin/ajout" class="btn btn-success my-4">Ajouter une nouvel article</a>
+    <a href="<?= WWW ?>admin/ajout" class="btn btn-success my-4">Ajouter un nouvel article</a>
 </div>
 
 <table class="table table-striped">
