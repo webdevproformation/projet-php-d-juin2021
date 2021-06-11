@@ -21,7 +21,12 @@ class AdminController extends Controller{
         //var_dump($_POST); // rdv 13h33
         if(!empty($_POST)){
 
-            if(isset($_POST["titre"]) && isset($_POST["contenu"])){
+            if(
+                isset($_POST["titre"]) &&
+                strlen($_POST["titre"]) > 4 && 
+                isset($_POST["contenu"]) &&
+                strlen($_POST["contenu"]) > 10
+                ){
                 // ajouter un nouvel article dans la base de données 
                 $sql = "INSERT INTO articles ( titre , contenu ) VALUES ( :titre , :contenu )";
 

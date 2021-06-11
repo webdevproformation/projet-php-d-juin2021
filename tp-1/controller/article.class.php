@@ -1,7 +1,7 @@
 <?php 
 
 class ArticleController extends Controller {
-    public function  view( $id ){
+    public function  view( $id = null ){
 
         $articles = Model::getPdo()->query("SELECT * FROM articles WHERE id = :id ", ["id" => $id] ) ;
 
