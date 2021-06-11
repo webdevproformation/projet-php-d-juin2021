@@ -14,7 +14,7 @@
     <?php foreach ($articles as $article ) : ?>
         <tr>
             <td><?= $article->id ?></td>
-            <td><?= $article->titre ?></td>
+            <td><?= Config::esc($article->titre) ?></td>
             <td>
                 <a href="<?= WWW ?>admin/modif/<?= $article->id ?>" class="btn btn-warning">Modifier</a>
                 <a href="<?= WWW ?>admin/suppr/<?= $article->id ?>" class="btn btn-danger ms-2">Supprimer</a>

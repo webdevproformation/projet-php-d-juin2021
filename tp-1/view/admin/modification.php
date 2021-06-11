@@ -2,11 +2,11 @@
 <form action="<?= WWW ?>admin/modif/<?= $article->id ?>" method="post">
     <div class="form-group">
         <label for="titre">titre</label>
-        <input type="text" name="titre" class="form-control" id="titre" value="<?= $article->titre ?>">
+        <input type="text" name="titre" class="form-control" id="titre" value="<?= Config::esc($article->titre) ?>">
     </div>
     <div>
         <label for="contenu">contenu</label>
-        <textarea name="contenu" id="contenu" class="form-control"><?= $article->contenu ?></textarea>
+        <textarea name="contenu" id="contenu" class="form-control"><?= Config::esc($article->contenu) ?></textarea>
         <input type="hidden" name="id" value="<?= $article->id ?>">
     </div>
     <div>
