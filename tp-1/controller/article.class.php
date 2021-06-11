@@ -2,8 +2,16 @@
 
 class ArticleController extends Controller {
     public function  view( $id ){
+
+        $articles = Model::getPdo()->query("SELECT * FROM articles WHERE id = :id ", ["id" => $id] ) ;
+
+        if(empty($articles)){
+            require "view/404.php";
+            die();
+        }
+
         $data = [
-            "article" => Model::getPdo()->query("SELECT * FROM articles WHERE id = :id ", ["id" => $id] )
+            "article" => $articles
         ];
             
         $this->set($data);
