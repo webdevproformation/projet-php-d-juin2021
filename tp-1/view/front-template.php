@@ -15,7 +15,12 @@
     <div class="container">
         <header class="row">
             <nav class="navbar navbar-expand navbar-light bg-light col">
-                <a href="<?= WWW ?>accueil/index" class="navbar-brand">TP PHP POO</a>
+                <a href="<?= WWW ?>" class="navbar-brand">TP PHP POO</a>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="<?= WWW ?>admin/accueil"  class="nav-link">Gestion des articles</a>
+                    </li>
+                </ul>
             </nav>
         </header>
         <main class="row">

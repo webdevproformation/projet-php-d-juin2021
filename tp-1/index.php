@@ -1,9 +1,10 @@
 <?php 
 
 $protocol = $_SERVER["REQUEST_SCHEME"];
+$port = ($_SERVER["SERVER_PORT"] == 80) ? "" : ":".$_SERVER["SERVER_PORT"];
 $domaine = $_SERVER["SERVER_NAME"];
 $projet = str_replace("index.php" , "" , $_SERVER["PHP_SELF"]);
-define("WWW", $protocol . "://" . $domaine . $projet) ;
+define("WWW", $protocol . $port . "://" . $domaine . $projet) ;
 // var_dump(WWW); // contenir l'adresse internet de toutes les pages 
 // http://localhost/projet-html/tp-1/
 // tp-1/
