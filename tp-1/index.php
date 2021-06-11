@@ -1,6 +1,6 @@
 <?php 
 
-$protocol = $_SERVER["REQUEST_SCHEME"];
+$protocol = $_SERVER["REQUEST_SCHEME"] ;
 $port = ($_SERVER["SERVER_PORT"] == 80) ? "" : ":".$_SERVER["SERVER_PORT"];
 $domaine = $_SERVER["SERVER_NAME"];
 $projet = str_replace("index.php" , "" , $_SERVER["PHP_SELF"]);
@@ -14,6 +14,12 @@ if(isset($_GET["p"])){
    require "core/Model.class.php";
    require "core/Controller.class.php";
    require "core/Config.class.php";
+
+   // CMS : mini Wordpress => 
+   // Content Management Système => site internet dans lequel internaute remplir des formulaires pour gérer son site 
+   // CMS utilise organisation du CODE => principe / paradigme de programmation => MVC le code 
+   // Organiser des Class  
+   // malik.h@webdevpro.net !!! 
 
    $params = explode("/",trim($_GET["p"] , "/"));
 
