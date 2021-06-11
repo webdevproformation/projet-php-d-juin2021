@@ -42,4 +42,10 @@ class AdminController extends Controller{
         $this->render("ajouter");
         // créer le dossier view/admin/ajouter.php
     }
+
+    public function suppr($id = null){
+        Model::getPdo()->query("DELETE FROM articles WHERE id = :id" , ["id" => $id ]);
+        header("location: ".WWW."admin/accueil");
+        die();
+    }
 }
