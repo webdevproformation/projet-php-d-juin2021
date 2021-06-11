@@ -10,5 +10,7 @@ class ArticleController extends Controller {
 
         $this->render("single");
         // view/article/single.php
+        // MVC :
+        // fonction Controller => appeler des données (BDD) Model => $variable => envoie à un fichier de Vue 
     }
 }
