@@ -1,0 +1,163 @@
+rappels :
+
+// https://discord.gg/5kyjTW4j
+
+
+variables et constantes
+
+$variable = "";
+define("NOM_CONSTANTE","valeur"); // ne peut plus être modifiée + globale 
+
+------------------
+
+string :
+
+concatenation avec '' avec ""
+echo 
+<?= =>
+str_replace($search , $replace , $subject);
+ucfirst ( $string );
+strtolower( $string ) ;
+explode ( $separator , $string) ;
+trim( $string , $characters ) ;
+substr_replace($string ,"", -1); // remplacer le dernier caractère d'une chaine 
+substr($big, 0, 100);
+
+------------------
+
+number :
+number_format($num , $nbDecimals , $decimal_separator , $thousands_separator)
+
+------------------
+
+array :
+
+array() / []
+
+tableaux indexés
+tableaux associatifs
+tableaux multidimensions
+
+var_dump();
+print_r();
+
+foreach(){}
+
+array_keys ( $array );
+array_sum( ) ;
+array_merge( $tab1, $tab2 ); 
+count() ;
+array_splice ($array, $offset, $length) ;
+extract()
+end()
+
+------------------
+
+boolean :
+
+isset()
+empty() =>  '',"",null,array(),FALSE,NULL,'0',0 
+is_numeric()
+in_array( $ceQuiEstRecherche , $tableau )
+
+filter_var( $email , FILTER_VALIDATE_EMAIL)
+
+https://www.w3schools.com/php/filter_validate_email.asp
+https://www.php.net/manual/fr/filter.filters.flags.php
+
+
+------------------
+
+détruire une variable / supprimer un item d'un tableau
+unset() 
+
+------------------
+
+JSON
+json_encode()
+json_decode()
+
+------------------
+
+Filesystem :
+
+dirname()
+require()
+require_once()
+include()
+include_once()
+
+------------------
+
+Output Buffering
+ob_start();
+$to_include = ob_get_clean();
+
+------------------
+
+supers globales
+$_SERVER
+$_GET
+$_POST
+$_SESSION / session_start()
+$_FILE
+
+------------------
+
+PDO
+
+
+<?php 
+
+/**
+ * 
+ */
+class DB
+{
+  
+  private $host = "localhost";
+  private $dbname = "commerce";
+  private $login = "commerce";
+  private $password = "commerce";
+  private $db ;
+
+  public function __construct()
+  {
+    try{
+      $this->db = new PDO("mysql:dbname=$this->dbname;host=$this->host;charset=utf8" , $this->login , $this->password);
+      $this->db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    }catch(PDOException $e){
+      $message = $e->getMessage();
+      require_once "part/500.php";
+      die();
+    }
+  }
+
+  public function query($sql, $params = []){
+    $std = $this->db->prepare($sql);
+    $std->execute($params);
+    return $std->fetchAll(PDO::FETCH_OBJ);
+  }
+
+}
+
+------------------
+
+class / instance / this / public / private / static
+
+héritage : 
+class parent générale avec automatismes
+class enfant avec des spécificités
+
+get_class($this) => récupérer le nom de la class qui exécute 
+method_exists() ;
+get_class_methods()
+get_class_vars("Enfant1")
+
+
+
+.htaccess
+
+
+RewriteEngine on
+RewriteRule ^([a-zA-Z0-9\-/_]*)$ index.php?p=$1

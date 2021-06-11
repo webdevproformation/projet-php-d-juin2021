@@ -23,8 +23,10 @@ if(isset($_GET["p"])){
         if(method_exists($c , $method )){
             /* var_dump($params); */
             $params = array_splice($params,2);
-           /*  var_dump($params);
-            die(); */
+            /* 
+                var_dump($params);
+                die(); 
+            */
 
             call_user_func_array([ $c , $method], $params  );
     
