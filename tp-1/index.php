@@ -1,6 +1,14 @@
 <?php 
-// dispatcher récupérer une partie de l'url => exécuter le bon controller 
-// rdv 15h45 bon café @ toute suite !! 
+
+$protocol = $_SERVER["REQUEST_SCHEME"];
+$domaine = $_SERVER["SERVER_NAME"];
+$projet = str_replace("index.php" , "" , $_SERVER["PHP_SELF"]);
+define("WWW", $protocol . "://" . $domaine . $projet) ;
+// var_dump(WWW); // contenir l'adresse internet de toutes les pages 
+// http://localhost/projet-html/tp-1/
+// tp-1/
+// die();
+
 if(isset($_GET["p"])){
    require "core/Model.class.php";
    require "core/Controller.class.php";

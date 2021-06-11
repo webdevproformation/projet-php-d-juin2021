@@ -15,7 +15,7 @@
     <div class="container">
         <header class="row">
             <nav class="navbar navbar-expand navbar-light bg-light col">
-                <a href="#" class="navbar-brand">TP PHP POO</a>
+                <a href="<?= WWW ?>accueil/index" class="navbar-brand">TP PHP POO</a>
             </nav>
         </header>
         <main class="row">
