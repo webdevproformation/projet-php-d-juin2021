@@ -26,9 +26,9 @@ class Model {
         // adresse base de données mysql:dbname=demo;host:localhost;charset=utf8
         $this->db = new PDO( $adresse_db , $this->login , $this->password );
     }
-    public function query($sql){
+    public function query($sql , $data = []){
         $requete = $this->db->prepare($sql);
-        $requete->execute();
+        $requete->execute($data); // éviter les injections SQL 
         return $requete->fetchAll(PDO::FETCH_OBJ);
     }
 }

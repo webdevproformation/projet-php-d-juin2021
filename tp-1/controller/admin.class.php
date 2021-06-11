@@ -18,7 +18,19 @@ class AdminController extends Controller{
 
     public function ajout(){
         // appeler une vue 
-        var_dump($_POST);
+        //var_dump($_POST); // rdv 13h33
+        if(!empty($_POST)){
+
+            if(isset($_POST["titre"]) && isset($_POST["contenu"])){
+                // ajouter un nouvel article dans la base de données 
+                $sql = "INSERT INTO articles ( titre , contenu ) VALUES ( :titre , :contenu )";
+
+               /*  var_dump($sql); */
+               // core/Model.class.php
+                Model::getPdo()->query($sql, $_POST);
+               
+            }
+        }
 
         $this->render("ajouter");
         // créer le dossier view/admin/ajouter.php
