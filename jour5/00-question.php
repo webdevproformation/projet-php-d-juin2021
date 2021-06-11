@@ -26,3 +26,20 @@ class AccueilController extends Controller{
         $this->renderMethode2("index");
     }
 }
+
+// [{}] => 
+
+$connexion = new PDO();
+$requete = $connexion->prepare("SELECT * FROM articles WHERE id = 1");
+$requete->execute();
+$data = $requete->fetchAll(PDO::FETCH_OBJ) => ne pas confondre fetch et fetchAll
+
+si => [ ] "SELECT * FROM articles WHERE id = 1000000"
+si => [{ }]  "SELECT * FROM articles WHERE id = 1"
+si => [{},{},{}] "SELECT * FROM articles"
+
+$data = $requete->fetch(PDO::FETCH_OBJ)
+
+si null / false  "SELECT * FROM articles WHERE id = 1000000"
+si => { }  "SELECT * FROM articles WHERE id = 1"
+IMPOSSIBLE si => [{},{},{}] 
