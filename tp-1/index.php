@@ -13,6 +13,7 @@ define("WWW", $protocol . $port . "://" . $domaine . $projet) ;
 if(isset($_GET["p"])){
    require "core/Model.class.php";
    require "core/Controller.class.php";
+   require "core/Config.class.php";
 
    $params = explode("/",trim($_GET["p"] , "/"));
 
