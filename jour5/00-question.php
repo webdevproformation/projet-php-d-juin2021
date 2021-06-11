@@ -43,3 +43,20 @@ $data = $requete->fetch(PDO::FETCH_OBJ)
 si null / false  "SELECT * FROM articles WHERE id = 1000000"
 si => { }  "SELECT * FROM articles WHERE id = 1"
 IMPOSSIBLE si => [{},{},{}] 
+
+
+// pour faire exécuter un fichier .php OBLIGATOIREMENT un serveur qui contient Apache 
+
+firefox   <========   Apache   == .htaccess =====>  index.php 
+
+firefox => 
+    écrite une adresse http://google.fr 
+                       http://localhost/....
+
+                       http://localhost/projet-html/tp-1/index.php => accueil
+
+                       http://localhost/projet-html/tp-1/presentation.php => presentation
+
+
+                       http://localhost/projet-html/tp-1/index.php?p=accueil => $_GET // $_SERVER (super globale $_POST )
+
