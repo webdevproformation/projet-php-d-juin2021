@@ -48,4 +48,25 @@ class AdminController extends Controller{
         header("location: ".WWW."admin/accueil");
         die();
     }
+
+    public function modif($id = null){
+
+        // est ce que l'article que l'on veut modifier existe ??
+        $article = Model::getPdo()->query("SELECT * FROM articles WHERE id = :id", ["id" => $id]);
+
+        if(empty($article)){
+            // si c'est un tableau vide => 
+            echo "attention l'article $id n'existe pas dans la base de données";
+            die();
+        }
+
+        $data = [
+            "article" => current( $article ) 
+        ];
+
+        $this->set($data);
+
+        $this->render("modification");
+
+    }
 }
