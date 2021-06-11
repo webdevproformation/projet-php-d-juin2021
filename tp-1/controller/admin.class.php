@@ -58,7 +58,7 @@ class AdminController extends Controller{
                 isset($_POST["contenu"]) &&
                 strlen($_POST["contenu"]) > 10 &&
                 isset($_POST["id"]) && 
-                is_numeric($_POST["id"])
+                is_numeric($_POST["id"]) 
             ){
                 Model::getPdo()->query("UPDATE articles SET titre= :titre , contenu = :contenu WHERE id = :id " , $_POST);
                 header("location: ".WWW."admin/accueil");
