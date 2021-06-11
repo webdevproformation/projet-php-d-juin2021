@@ -20,7 +20,6 @@ class AdminController extends Controller{
         // appeler une vue 
         //var_dump($_POST); // rdv 13h33
         if(!empty($_POST)){
-
             if(
                 isset($_POST["titre"]) &&
                 strlen($_POST["titre"]) > 4 && 
@@ -49,11 +48,25 @@ class AdminController extends Controller{
         die();
     }
 
+
     public function modif($id = null){
 
+        if(!empty($_POST)){
+            if(
+                isset($_POST["titre"]) &&
+                strlen($_POST["titre"]) > 4 && 
+                isset($_POST["contenu"]) &&
+                strlen($_POST["contenu"]) > 10 &&
+                isset($_POST["id"]) && 
+                is_numeric($_POST["id"])
+            ){
+                Model::getPdo()->query("UPDATE articles SET titre= :titre , contenu = :contenu WHERE id = :id " , $_POST);
+                header("location: ".WWW."admin/accueil");
+                die();
+            }
+        }
         // est ce que l'article que l'on veut modifier existe ??
         $article = Model::getPdo()->query("SELECT * FROM articles WHERE id = :id", ["id" => $id]);
-
         if(empty($article)){
             // si c'est un tableau vide => 
             echo "attention l'article $id n'existe pas dans la base de données";
