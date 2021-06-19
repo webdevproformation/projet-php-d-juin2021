@@ -1,6 +1,13 @@
 <?php 
 // controller/admin.class.php
 class AdminController extends Controller{
+
+    public function __construct(){
+        if(!isset($_SESSION["auth"])){
+            header("Location: ".WWW."login");
+        }
+    }
+
     public function accueil(){
         // echo "je suis la page d'accueil de l'administration ";
         // Est ce que l'interaute est connecté ?

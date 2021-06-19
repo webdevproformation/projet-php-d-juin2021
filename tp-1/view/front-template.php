@@ -17,9 +17,19 @@
             <nav class="navbar navbar-expand navbar-light bg-light col">
                 <a href="<?= WWW ?>" class="navbar-brand">TP PHP POO</a>
                 <ul class="navbar-nav ms-auto">
+                  <?php if(!isset($_SESSION["auth"])) : ?>
+                    <li class="nav-item">
+                        <a href="<?= WWW ?>login"  class="nav-link">Connexion</a>
+                    </li>
+                     <?php endif ?>
+                    <?php if(isset($_SESSION["auth"])) : ?>
                     <li class="nav-item">
                         <a href="<?= WWW ?>admin/accueil"  class="nav-link">Gestion des articles</a>
                     </li>
+                    <li class="nav-item">
+                        <a href="<?= WWW ?>login/deconnexion"  class="nav-link">Déconnexion</a>
+                    </li>
+                    <?php endif ?>
                 </ul>
             </nav>
         </header>

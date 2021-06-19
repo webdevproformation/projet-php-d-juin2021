@@ -1,5 +1,5 @@
 <?php 
-
+session_start();
 $protocol = $_SERVER["REQUEST_SCHEME"] ;
 $port = ($_SERVER["SERVER_PORT"] == 80) ? "" : ":".$_SERVER["SERVER_PORT"];
 $domaine = $_SERVER["SERVER_NAME"];
